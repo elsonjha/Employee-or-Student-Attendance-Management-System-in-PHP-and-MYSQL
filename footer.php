@@ -7,7 +7,7 @@
                $newDate = date("d-m-Y", strtotime($date));
       ?>			   
                
-        <p>Copyright &copy; <?php echo date("Y"); ?> Deepak Yadav</p>
+        <p>Copyright &copy; <?php echo date("Y"); ?> CyberSmithSecure</p>
 		</div>
   </div>
 </footer>
