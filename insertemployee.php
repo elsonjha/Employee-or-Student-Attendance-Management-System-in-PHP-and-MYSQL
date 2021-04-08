@@ -44,7 +44,7 @@ echo "Return Code: " . $_FILES["profileImage"]["error"] . “<br>”;
           </script>
           <?php
 } else {
-      copy($_FILES["profileImage"]["tmp_name"], $target_file)
+      if(copy($_FILES["profileImage"]["tmp_name"], $target_file)){
         $name =  $_POST["name"];
         $gender =  $_POST["gender"];
         $email  = $_POST['email'];
@@ -70,7 +70,14 @@ echo "Return Code: " . $_FILES["profileImage"]["error"] . “<br>”;
           </script>
         <?php
         }
-    }
+    } else {
+                       ?>
+          <script>
+            console.log(<?php print_r($_FILES); ?>)
+           if(!alert("Error'.$_FILES["profileImage"]["error"].'")){window.location = "admin.php?view_employee=view_employee";}
+          </script>
+          <?php
+      }
     }
   }
 
