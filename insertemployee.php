@@ -74,7 +74,7 @@ echo "Return Code: " . $_FILES["profileImage"]["error"] . "";
                        ?>
           <script>
             console.log(<?php print_r($_FILES); ?>)
-           if(!alert("Error")){window.location = "admin.php?view_employee=view_employee";}
+           if(!alert("Error 2")){window.location = "admin.php?view_employee=view_employee";}
           </script>
           <?php
       }
