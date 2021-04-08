@@ -12,7 +12,7 @@
         echo "connected successfully";
     }
 
-    $profileImageName = time() . '-' . $_FILES["profileImage"]["name"];
+    $profileImageName = $_FILES["profileImage"]["name"];
     // For image upload
     $target_dir = "images/";
     $target_file = $target_dir . basename($profileImageName);
@@ -58,7 +58,7 @@
       } else {
         ?>
         <script>
-         console.log('<?php echo $target_file; ?>');
+         console.log('<?php echo $error; ?>');
           // window.location = "admin.php?view_employee=view_employee";
              if(!alert("Can not add employee. File Upload Error")){window.location = "admin.php?view_employee=view_employee";}
       
