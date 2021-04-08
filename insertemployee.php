@@ -62,6 +62,7 @@ echo "Return Code: " . $_FILES["profileImage"]["error"] . "";
           </script>
           <?php
         } else {
+                   printf("Errormessage: %s\n", mysqli_error($conn));
           ?>
           <script>
            console.log(<?php mysqli_error($conn)?>)
