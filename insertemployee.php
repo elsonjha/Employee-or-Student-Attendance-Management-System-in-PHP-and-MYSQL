@@ -14,7 +14,7 @@
 
     $profileImageName = $_FILES["profileImage"]["name"];
     // For image upload
-    $target_dir = "images/";
+    $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/images/";
     $target_file = $target_dir . basename($profileImageName);
     // VALIDATION
     // validate image size. Size is calculated in Bytes
@@ -73,7 +73,9 @@ echo "Return Code: " . $_FILES["profileImage"]["error"] . "";
     } else {
                        ?>
           <script>
-            console.log(<?php print_r($_FILES); ?>)
+            console.log(<?php print_r($_FILES); 
+    print_r($target_file);
+?>)
            if(!alert("Error 2")){window.location = "admin.php?view_employee=view_employee";}
           </script>
           <?php
