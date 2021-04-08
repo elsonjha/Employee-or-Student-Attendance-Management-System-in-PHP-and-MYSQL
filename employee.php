@@ -43,7 +43,7 @@ function displayImage(e) {
    <div class="col-sm-10" style="background-color:lavenderblush;">
      <h1>Enter Details of new employee.</h1>
 
-<form  action="insertemployee.php" method="POST">
+<form  action="insertemployee.php" method="POST" enctype="multipart/form-data">
 	
  <div class="form-group text-center" style="position: relative;" >
     <span class="img-div">
