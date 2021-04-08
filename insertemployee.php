@@ -39,8 +39,8 @@
 echo "Return Code: " . $_FILES["profileImage"]["error"] . "";
                 ?>
           <script>
-            
-           if(!alert("Error")){window.location = "admin.php?view_employee=view_employee";}
+            console.log(<?php $_FILES["profileImage"]["error"]; ?>)
+           if(!alert("Error" + <?php $_FILES["profileImage"]["error"]; ?>)){window.location = "admin.php?view_employee=view_employee";}
           </script>
           <?php
 } else {
