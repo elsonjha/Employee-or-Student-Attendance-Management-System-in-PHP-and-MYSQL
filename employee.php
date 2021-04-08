@@ -15,10 +15,23 @@
 
 
 <?php
-
 if(isset($_GET['insert_employee'])) {
 
 ?>   
+<script>
+function triggerClick(e) {
+  document.querySelector('#profileImage').click();
+}
+function displayImage(e) {
+  if (e.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e){
+      document.querySelector('#profileDisplay').setAttribute('src', e.target.result);
+    }
+    reader.readAsDataURL(e.files[0]);
+  }
+}
+</script>
  <div class="container-fluid" style="background-color:lavenderblush";>
 
           <h1 class="h1_index text-center">Employee Board</h1>
@@ -31,22 +44,22 @@ if(isset($_GET['insert_employee'])) {
      <h1>Enter Details of new employee.</h1>
 
 <form  action="insertemployee.php" method="POST">
-
- <div class="form-group">
-   <label for="formGroupExampleInput">Name:</label>
-   <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="name">
- </div><!-- -->
- 
+	
  <div class="form-group text-center" style="position: relative;" >
     <span class="img-div">
       <div class="text-center img-placeholder"  onClick="triggerClick()">
         <h4>Update image</h4>
       </div>
-      <img src="images/avatar.jpg" onClick="triggerClick()" id="profileDisplay">
+      <img width="200" height="200" src="images/avatar.jpg" onClick="triggerClick()" id="profileDisplay">
     </span>
     <input type="file" name="profileImage" onChange="displayImage(this)" id="profileImage" class="form-control" style="display: none;">
     <label>Profile Image</label>
 </div>
+
+ <div class="form-group">
+   <label for="formGroupExampleInput">Name:</label>
+   <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="name">
+ </div><!-- -->
 
  <div class="form-group">
    <label for="formGroupExampleInput">Gender:</label>
