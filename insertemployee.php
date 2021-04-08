@@ -58,7 +58,7 @@
       } else {
         ?>
         <script>
-         console.log('<?php echo $_FILES["profileImage"] ?>');
+         console.log('<?php echo $target_file; ?>');
           // window.location = "admin.php?view_employee=view_employee";
              if(!alert("Can not add employee. File Upload Error")){window.location = "admin.php?view_employee=view_employee";}
       
