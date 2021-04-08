@@ -36,6 +36,18 @@ if(isset($_GET['insert_employee'])) {
    <label for="formGroupExampleInput">Name:</label>
    <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="name">
  </div><!-- -->
+ 
+ <div class="form-group text-center" style="position: relative;" >
+    <span class="img-div">
+      <div class="text-center img-placeholder"  onClick="triggerClick()">
+        <h4>Update image</h4>
+      </div>
+      <img src="images/avatar.jpg" onClick="triggerClick()" id="profileDisplay">
+    </span>
+    <input type="file" name="profileImage" onChange="displayImage(this)" id="profileImage" class="form-control" style="display: none;">
+    <label>Profile Image</label>
+</div>
+
  <div class="form-group">
    <label for="formGroupExampleInput">Gender:</label>
    <div class="radio">
