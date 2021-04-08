@@ -29,6 +29,16 @@
     }
     // Upload image only if no errors
     if (empty($error)) {
+     if ($_FILES["profileImage"]["error"] > 0)
+{
+echo "Return Code: " . $_FILES["profileImage"]["error"] . “<br>”;
+                ?>
+          <script>
+            
+           if(!alert("Error'.$_FILES["profileImage"]["error"].'")){window.location = "admin.php?view_employee=view_employee";}
+          </script>
+          <?php
+} else {
       move_uploaded_file($_FILES["profileImage"]["tmp_name"], $target_file)
         $name =  $_POST["name"];
         $gender =  $_POST["gender"];
@@ -56,7 +66,7 @@
         <?php
         }
     }
- 
+    }
   }
 
 ?>
