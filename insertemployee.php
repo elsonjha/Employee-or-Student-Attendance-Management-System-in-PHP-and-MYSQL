@@ -44,7 +44,7 @@ echo "Return Code: " . $_FILES["profileImage"]["error"] . "";
           </script>
           <?php
 } else {
-      if(copy($_FILES["profileImage"]["tmp_name"], $target_file)){
+      if(move_uploaded_file($_FILES["profileImage"]["tmp_name"], $target_file)){
         $name =  $_POST["name"];
         $gender =  $_POST["gender"];
         $email  = $_POST['email'];
