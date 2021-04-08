@@ -14,7 +14,7 @@
 
     $profileImageName = $_FILES["profileImage"]["name"];
     // For image upload
-    $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/images/";
+    $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/images/";
     $target_file = $target_dir . basename($profileImageName);
     // VALIDATION
     // validate image size. Size is calculated in Bytes
