@@ -76,6 +76,7 @@ CREATE TABLE IF NOT EXISTS `employee_details` (
   `DOB` varchar(25) NOT NULL,
   `contact_no` varchar(25) NOT NULL,
   `department` varchar(20) NOT NULL,
+  `profile_image` varchar(45),
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 COMMIT;
