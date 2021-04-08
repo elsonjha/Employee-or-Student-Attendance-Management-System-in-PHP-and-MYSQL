@@ -36,7 +36,7 @@
 <?php
      if ($_FILES["profileImage"]["error"] > 0)
 {
-echo "Return Code: " . $_FILES["profileImage"]["error"] . “<br>”;
+echo "Return Code: " . $_FILES["profileImage"]["error"] . "";
                 ?>
           <script>
             
@@ -80,5 +80,5 @@ echo "Return Code: " . $_FILES["profileImage"]["error"] . “<br>”;
       }
     }
   }
-
+ }
 ?>
