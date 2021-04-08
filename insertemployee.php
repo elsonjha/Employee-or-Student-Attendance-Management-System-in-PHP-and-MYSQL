@@ -40,7 +40,7 @@ echo "Return Code: " . $_FILES["profileImage"]["error"] . “<br>”;
                 ?>
           <script>
             
-           if(!alert("Error'.$_FILES["profileImage"]["error"].'")){window.location = "admin.php?view_employee=view_employee";}
+           if(!alert("Error")){window.location = "admin.php?view_employee=view_employee";}
           </script>
           <?php
 } else {
@@ -74,7 +74,7 @@ echo "Return Code: " . $_FILES["profileImage"]["error"] . “<br>”;
                        ?>
           <script>
             console.log(<?php print_r($_FILES); ?>)
-           if(!alert("Error'.$_FILES["profileImage"]["error"].'")){window.location = "admin.php?view_employee=view_employee";}
+           if(!alert("Error")){window.location = "admin.php?view_employee=view_employee";}
           </script>
           <?php
       }
