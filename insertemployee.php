@@ -12,7 +12,7 @@
         echo "connected successfully";
     }
 
-    $profileImageName = $_FILES["profileImage"]["name"];
+    $profileImageName = time() . '-' . $_FILES["profileImage"]["name"];
     // For image upload
     $target_dir = "images/";
     $target_file = $target_dir . basename($profileImageName);
