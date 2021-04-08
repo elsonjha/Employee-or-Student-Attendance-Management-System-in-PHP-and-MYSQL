@@ -29,7 +29,7 @@
     }
     // Upload image only if no errors
     if (empty($error)) {
-      if(move_uploaded_file($_FILES["profileImage"]["tmp_name"], $target_file)) {
+      move_uploaded_file($_FILES["profileImage"]["tmp_name"], $target_file)
         $name =  $_POST["name"];
         $gender =  $_POST["gender"];
         $email  = $_POST['email'];
@@ -55,16 +55,6 @@
           </script>
         <?php
         }
-      } else {
-        ?>
-        <script>
-         console.log('<?php echo move_uploaded_file($_FILES["profileImage"]["tmp_name"], $target_file); ?>');
-          // window.location = "admin.php?view_employee=view_employee";
-             if(!alert("Can not add employee. File Upload Error")){window.location = "admin.php?view_employee=view_employee";}
-      
-        </script>
-      <?php
-      }
     }
  
   }
