@@ -29,6 +29,11 @@
     }
     // Upload image only if no errors
     if (empty($error)) {
+     ?>
+     <script>
+      console.log(<?php print_r($_FILES); ?>)
+      </script>
+<?php
      if ($_FILES["profileImage"]["error"] > 0)
 {
 echo "Return Code: " . $_FILES["profileImage"]["error"] . “<br>”;
