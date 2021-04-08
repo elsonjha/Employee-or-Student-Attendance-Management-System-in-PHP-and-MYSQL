@@ -64,6 +64,7 @@ echo "Return Code: " . $_FILES["profileImage"]["error"] . "";
         } else {
           ?>
           <script>
+           console.log(<?php mysqli_error($conn)?>)
             // window.location = "admin.php?view_employee=view_employee";
                if(!alert("Can not add employee. Some error occured")){window.location = "admin.php?view_employee=view_employee";}
         
